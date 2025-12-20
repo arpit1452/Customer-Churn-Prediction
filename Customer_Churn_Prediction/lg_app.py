@@ -2,12 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import sklearn
+import os
 import pickle
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 #load model and data
-lg, scaler = pickle.load(open('logistic_Churn.pkl','rb'))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, 'models', 'logistic_Churn.pkl')
 
+lg, scaler = pickle.load(open(MODEL_PATH, 'rb'))
 
 #create a web app
 st.title("Churn Prediction using Logistic Regression")
