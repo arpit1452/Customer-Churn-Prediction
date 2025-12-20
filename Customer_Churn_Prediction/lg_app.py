@@ -4,11 +4,10 @@ import numpy as np
 import sklearn
 import pickle
 from sklearn.preprocessing import LabelEncoder, StandardScaler
-label_encoder=LabelEncoder()
-scaler=StandardScaler()
 
 #load model and data
-model = pickle.load(open('models/logistic_Churn.pkl', 'rb'))
+lg, scaler = pickle.load(open('logistic_Churn.pkl','rb'))
+
 
 #create a web app
 st.title("Churn Prediction using Logistic Regression")
@@ -25,30 +24,40 @@ MonthlyCharges= st.text_input("Enter your Monthly charges")
 TotalCharges = st.text_input("Enter your Total charges")
 
 #helper functions
-def prediction(gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,multiline,techsupport,contract,monthlycharge,totalcharge):
-    data = {
-    'gender': [gender],
-    'SeniorCitizen': [SeniorCitizen],
-    'Partner': [Partner],
-    'Dependents': [Dependents],
-    'tenure': [tenure],
-    'PhoneService': [PhoneService],
-    'MultipleLines': [multiline],
-    'TechSupport': [techsupport],
-    'Contract': [contract],
-    'MonthlyCharges': [monthlycharge],
-    'TotalCharges': [totalcharge]
-    }
-    df1=pd.DataFrame(data)
+def prediction(gender, SeniorCitizen, Partner, Dependents, tenure,
+               PhoneService, MultipleLines, TechSupport, Contract,
+               MonthlyCharges, TotalCharges):
 
-    #Encode the categorical values
-    categorical_columns=['gender','SeniorCitizen','Partner','Dependents','tenure','PhoneService','MultipleLines','TechSupport','Contract','MonthlyCharges','TotalCharges']
-    for column in categorical_columns:
-        df1[column]=label_encoder.fit_transform(df1[column])
+    df1 = pd.DataFrame([[
+        gender, SeniorCitizen, Partner, Dependents, tenure,
+        PhoneService, MultipleLines, TechSupport, Contract,
+        MonthlyCharges, TotalCharges
+    ]], columns=[
+        'gender','SeniorCitizen','Partner','Dependents','tenure',
+        'PhoneService','MultipleLines','TechSupport','Contract',
+        'MonthlyCharges','TotalCharges'
+    ])
 
-    df1=scaler.fit_transform(df1)
-    result=model.predict(df1).reshape(1,-1)
+    # Encode categorical columns ONLY (same as training)
+    categorical_cols = [
+        'gender','SeniorCitizen','Partner','Dependents',
+        'PhoneService','MultipleLines','TechSupport','Contract'
+    ]
+
+    for col in categorical_cols:
+        df1[col] = LabelEncoder().fit_transform(df1[col])
+
+    # Convert numeric columns
+    df1['tenure'] = pd.to_numeric(df1['tenure'])
+    df1['MonthlyCharges'] = pd.to_numeric(df1['MonthlyCharges'])
+    df1['TotalCharges'] = pd.to_numeric(df1['TotalCharges'])
+
+    # Scale using TRAINED scaler (NO FIT)
+    df1 = scaler.transform(df1)
+
+    result = lg.predict(df1)
     return result[0]
+
 
 # Tips for Churn Prevention
 churn_tips_data = {
