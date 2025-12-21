@@ -2,9 +2,9 @@
 
 <h3>Overview</h3>
 
-This project is an end-to-end Machine Learning application that predicts whether a customer is likely to churn (leave a service) based on their demographic, service usage, and billing information.
+-This project is an end-to-end Machine Learning application that predicts whether a customer is likely to churn (leave a service) based on their demographic, service usage, and billing information.
 
-The model is deployed as an interactive web application using Streamlit Cloud, making it easily accessible for real-time predictions.
+-The model is deployed as an interactive web application using Streamlit Cloud, making it easily accessible for real-time predictions.
 
 
 <h3>Live Demo</h3>
@@ -17,9 +17,9 @@ Deployed App: (https://customer-churn-prediction-xf9uobvp49mv4njxsdojxw.streamli
 Customer churn is a major challenge for subscription-based businesses.
 The goal of this project is to:
 
-Predict customer churn in advance
+-Predict customer churn in advance
 
-Help businesses take proactive retention actions
+-Help businesses take proactive retention actions
 
 
 <h3>Tech Stack</h3>
@@ -64,78 +64,78 @@ Dataset Link: https://www.kaggle.com/datasets/rashadrmammadov/customer-churn-dat
 
 The dataset contains customer-level information such as:
 
-Gender
+-Gender
 
-Senior Citizen status
+-Senior Citizen status
 
-Partner & Dependents
+-Partner & Dependents
 
-Tenure
+-Tenure
 
-Phone & Internet Services
+-Phone & Internet Services
 
-Contract type
+-Contract type
 
-Monthly & Total Charges
+-Monthly & Total Charges
 
-Churn (Target Variable)
+-Churn (Target Variable)
 
 
 <h3>Machine Learning Workflow</h3>
 
-Data Cleaning
+-Data Cleaning
 
-Removed irrelevant columns
+-Removed irrelevant columns
 
-Handled missing values
+-Handled missing values
 
-Feature Encoding
+-Feature Encoding
 
-Categorical variables encoded using Label Encoding
+-Categorical variables encoded using Label Encoding
 
-Feature Scaling
+-Feature Scaling
 
-StandardScaler applied to numerical features
+-StandardScaler applied to numerical features
 
-Model Training
+-Model Training
 
-Logistic Regression trained on 11 features
+-Logistic Regression trained on 11 features
 
-Model Serialization
+-Model Serialization
 
-Model and scaler saved using pickle
+-Model and scaler saved using pickle
 
-Deployment
+-Deployment
 
-Integrated with Streamlit for real-time inference
+-Integrated with Streamlit for real-time inference
 
 
 <h3>Model Performance</h3>
 
-Evaluation Metric: Accuracy
+-Evaluation Metric: Accuracy
 
 Model chosen for:
 
-Interpretability
+-Interpretability
 
-Fast inference
+-Fast inference
 
-Production suitability
+-Production suitability
 
 
 <h3>Application Features</h3>
 
-Interactive user input form
+-Interactive user input form
 
-Real-time churn prediction
+-Real-time churn prediction
 
 Displays:
 
-Churn or Not Churn
+-Churn or Not Churn
 
-Actionable retention tips
+-Actionable retention tips
 
-Cloud-hosted and accessible via browser
+-Cloud-hosted and accessible via browser
 
 
 <h3>Docker Support</h3>
@@ -160,13 +160,13 @@ streamlit run lg_app.py
 
 <h3>Key Learnings</h3>
 
-Importance of consistent preprocessing between training and inference
+-Importance of consistent preprocessing between training and inference
 
-Handling feature mismatch errors in deployment
+-Handling feature mismatch errors in deployment
 
-Using robust file paths for cloud environments
+-Using robust file paths for cloud environments
 
-End-to-end ML lifecycle: training → serialization → deployment
+-End-to-end ML lifecycle: training → serialization → deployment
 
 <h3>👤 Author</h3>
 
