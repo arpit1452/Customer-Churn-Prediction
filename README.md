@@ -64,21 +64,7 @@ Dataset Link: https://www.kaggle.com/datasets/rashadrmammadov/customer-churn-dat
 
 The dataset contains customer-level information such as:
 
--Gender
-
--Senior Citizen status
-
--Partner & Dependents
-
--Tenure
-
--Phone & Internet Services
-
--Contract type
-
--Monthly & Total Charges
-
--Churn (Target Variable)
+-Gender, Senior Citizen status, Partner & Dependents, Tenure, Phone & Internet Services, Contract type, Monthly & Total Charges, Churn (Target Variable)
 
 
 <h3>Machine Learning Workflow</h3>
