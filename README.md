@@ -41,14 +41,14 @@ Containerization: Docker
 
 <h3>Project Structure</h3>
 Customer_Churn_Prediction/
-├── lg_app.py                     # Streamlit application
-├── requirements.txt              # Python dependencies
-├── Dockerfile                    # Docker configuration
-├── .dockerignore                 # Docker ignore rules
-├── Customer_Churn_Prediction.ipynb  # Main Jupyter Notebook
+├── lg_app.py                          # Streamlit application
+├── requirements.txt                  # Python dependencies
+├── Dockerfile                        # Docker configuration
+├── .dockerignore                     # Docker ignore rules
+├── Customer_Churn_Prediction.ipynb   # Main Jupyter Notebook
 ├── models/
-│   └── logistic_Churn.pkl        # Trained ML model + scaler
-└── README.md                     # Project documentation
+│   └── logistic_Churn.pkl            # Trained ML model + scaler
+└── README.md                         # Project documentation
 
 
 
