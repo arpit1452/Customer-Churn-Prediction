@@ -1,4 +1,5 @@
-Customer Churn Prediction using Machine Learning & Streamlit
+<h2>Customer Churn Prediction using Machine Learning & Streamlit</h2>
+
 Overview
 
 This project is an end-to-end Machine Learning application that predicts whether a customer is likely to churn (leave a service) based on their demographic, service usage, and billing information.
