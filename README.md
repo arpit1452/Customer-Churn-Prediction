@@ -1,16 +1,18 @@
 <h2>Customer Churn Prediction using Machine Learning & Streamlit</h2>
 
-Overview
+<h3>Overview</h3>
 
 This project is an end-to-end Machine Learning application that predicts whether a customer is likely to churn (leave a service) based on their demographic, service usage, and billing information.
 
 The model is deployed as an interactive web application using Streamlit Cloud, making it easily accessible for real-time predictions.
 
-🚀 Live Demo
 
-👉 Deployed App: (https://customer-churn-prediction-xf9uobvp49mv4njxsdojxw.streamlit.app/)
+<h3>Live Demo</h3>
 
-🧠 Problem Statement
+Deployed App: (https://customer-churn-prediction-xf9uobvp49mv4njxsdojxw.streamlit.app/)
+
+
+<h3>Problem Statement</h3>
 
 Customer churn is a major challenge for subscription-based businesses.
 The goal of this project is to:
@@ -19,7 +21,8 @@ Predict customer churn in advance
 
 Help businesses take proactive retention actions
 
-🛠️ Tech Stack
+
+<h3>Tech Stack</h3>
 
 Programming Language: Python
 
@@ -35,7 +38,8 @@ Version Control: Git & GitHub
 
 Containerization: Docker 
 
-📂 Project Structure
+
+<h3>Project Structure</h3>
 Customer_Churn_Prediction/
 │
 ├── lg_app.py                 # Streamlit application
@@ -47,7 +51,8 @@ Customer_Churn_Prediction/
 │   └── logistic_Churn.pkl    # Trained ML model + scaler
 └── README.md                 # Project documentation
 
-📊 Dataset Description
+
+<h3>Dataset Description</h3>
 
 Dataset Link: https://www.kaggle.com/datasets/rashadrmammadov/customer-churn-dataset
 
@@ -69,7 +74,8 @@ Monthly & Total Charges
 
 Churn (Target Variable)
 
-⚙️ Machine Learning Workflow
+
+<h3>Machine Learning Workflow</h3>
 
 Data Cleaning
 
@@ -97,7 +103,8 @@ Deployment
 
 Integrated with Streamlit for real-time inference
 
-🧪 Model Performance
+
+<h3>Model Performance</h3>
 
 Evaluation Metric: Accuracy
 
@@ -109,7 +116,8 @@ Fast inference
 
 Production suitability
 
-🖥️ Application Features
+
+<h3>Application Features</h3>
 
 Interactive user input form
 
@@ -123,14 +131,16 @@ Actionable retention tips
 
 Cloud-hosted and accessible via browser
 
-🐳 Docker Support
+
+<h3>Docker Support</h3>
 
 The application can also be run using Docker:
 
 docker build -t churn-app .
 docker run -p 8501:8501 churn-app
 
-▶️ How to Run Locally
+
+<h3>▶️ How to Run Locally</h3>
 1️⃣ Clone the repository
 git clone https://github.com/<your-username>/Customer-Churn-Prediction.git
 cd Customer_Churn_Prediction
@@ -141,7 +151,8 @@ pip install -r requirements.txt
 3️⃣ Run the app
 streamlit run lg_app.py
 
-🧠 Key Learnings
+
+<h3>Key Learnings</h3>
 
 Importance of consistent preprocessing between training and inference
 
@@ -151,7 +162,7 @@ Using robust file paths for cloud environments
 
 End-to-end ML lifecycle: training → serialization → deployment
 
-👤 Author
+<h3>👤 Author</h3>
 
 Arpit Kumar
 Aspiring Data Scientist | Machine Learning | Deep Learning
